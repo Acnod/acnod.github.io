@@ -3,7 +3,7 @@
  * 2 | $base-color: #ffffff;
  *   |                     ^
  *   '
- *   var.scss 2:21  root stylesheet */
+ *   _vars.scss 2:21  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",

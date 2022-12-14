@@ -150,6 +150,9 @@ body {
   .links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    @media (min-width: 940px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
     grid-template-rows: 1fr;
     grid-column-gap: 28px;
     grid-row-gap: 28px;
@@ -167,6 +170,7 @@ body {
         list-style-type: none;
         color: rgba(255, 255, 255, 0.9);
         a {
+          line-height: 8px;
           color: rgba(255, 255, 255, 0.9);
           text-decoration: none;
           b {
@@ -179,6 +183,7 @@ body {
     }
   }
   .last {
+    padding-top: 64px;
     h1 {
       text-align: center;
       margin: 0;

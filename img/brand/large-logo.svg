@@ -2,15 +2,15 @@
 <svg
    version="1.2"
    width="81.580002mm"
-   height="44.660004mm"
-   viewBox="2135 26852 8158.0005 4466.0005"
+   height="33.5mm"
+   viewBox="2135 26852 8158.0005 3350.0001"
    preserveAspectRatio="xMidYMid"
    fill-rule="evenodd"
    stroke-width="28.222"
    stroke-linejoin="round"
    xml:space="preserve"
    id="svg85"
-   sodipodi:docname="acnod-logo-classic.svg"
+   sodipodi:docname="large-logo.svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -26,11 +26,11 @@
    inkscape:deskcolor="#d1d1d1"
    inkscape:document-units="mm"
    showgrid="false"
-   inkscape:zoom="0.847465"
-   inkscape:cx="37.169677"
-   inkscape:cy="76.699332"
-   inkscape:window-width="1366"
-   inkscape:window-height="705"
+   inkscape:zoom="2.396993"
+   inkscape:cx="127.86854"
+   inkscape:cy="39.215801"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
    inkscape:window-x="-8"
    inkscape:window-y="-8"
    inkscape:window-maximized="1"
@@ -154,36 +154,36 @@
  <path
    fill="#000000"
    stroke="none"
-   d="m 3251,29829 v -100 c -109,64 -236,100 -373,100 -411,0 -743,-333 -743,-745 0,-411 332,-743 743,-743 137,0 264,36 373,99 v -99 h 372 v 1488 z m 0,0 z m -745,-745 c 0,-205 167,-372 372,-372 207,0 373,167 373,372 0,207 -166,373 -373,373 -205,0 -372,-166 -372,-373 z"
+   d="m 3251,29457 v -100 c -109,64 -236,100 -373,100 -411,0 -743,-333 -743,-745 0,-411 332,-743 743,-743 137,0 264,36 373,99 v -99 h 372 v 1488 z m 0,0 z m -745,-745 c 0,-205 167,-372 372,-372 207,0 373,167 373,372 0,207 -166,373 -373,373 -205,0 -372,-166 -372,-373 z"
    id="path36"
-   style="fill:#1a1a1a" /><path
+   style="fill:#ffffff" /><path
    fill="#000000"
    stroke="none"
-   d="m 3622,29084 c 0,-411 332,-743 744,-743 347,0 639,237 721,557 h -399 c -64,-111 -184,-186 -322,-186 -205,0 -372,167 -372,372 0,207 167,373 372,373 138,0 258,-75 322,-186 h 399 c -82,321 -374,558 -721,558 -412,0 -744,-333 -744,-745 z"
+   d="m 3622,28712 c 0,-411 332,-743 744,-743 347,0 639,237 721,557 h -399 c -64,-111 -184,-186 -322,-186 -205,0 -372,167 -372,372 0,207 167,373 372,373 138,0 258,-75 322,-186 h 399 c -82,321 -374,558 -721,558 -412,0 -744,-333 -744,-745 z"
    id="path43"
-   style="fill:#1a1a1a" /><path
+   style="fill:#ffffff" /><path
    fill="#000000"
    stroke="none"
-   d="m 5457,28440 c 110,-63 237,-99 372,-99 412,0 745,332 745,743 v 0 745 h -372 v -100 -645 c 0,-205 -166,-372 -373,-372 -205,0 -372,167 -372,372 v 645 100 h -371 v -1488 h 371 z"
+   d="m 5457,28068 c 110,-63 237,-99 372,-99 412,0 745,332 745,743 v 0 745 h -372 v -100 -645 c 0,-205 -166,-372 -373,-372 -205,0 -372,167 -372,372 v 645 100 h -371 v -1488 h 371 z"
    id="path50"
-   style="fill:#1a1a1a" /><path
+   style="fill:#ffffff" /><path
    fill="#000000"
    stroke="none"
-   d="m 6573,29084 c 0,-411 332,-743 743,-743 412,0 745,332 745,743 0,412 -333,745 -745,745 -411,0 -743,-333 -743,-745 z m 0,0 z m 371,0 c 0,-205 167,-372 372,-372 207,0 373,167 373,372 0,207 -166,373 -373,373 -205,0 -372,-166 -372,-373 z"
+   d="m 6573,28712 c 0,-411 332,-743 743,-743 412,0 745,332 745,743 0,412 -333,745 -745,745 -411,0 -743,-333 -743,-745 z m 0,0 z m 371,0 c 0,-205 167,-372 372,-372 207,0 373,167 373,372 0,207 -166,373 -373,373 -205,0 -372,-166 -372,-373 z"
    id="path57"
-   style="fill:#1a1a1a" /><path
+   style="fill:#ffffff" /><path
    fill="#000000"
    stroke="none"
-   d="m 8060,29085 c 0,-412 332,-745 743,-745 137,0 264,37 373,100 v -471 h 372 v 1116 744 h -372 v -100 c -109,63 -236,100 -373,100 -411,0 -743,-333 -743,-744 z m 0,0 z m 1116,1 v -2 c 0,-206 -167,-372 -373,-372 -205,0 -372,167 -372,373 0,205 167,372 372,372 206,0 373,-166 373,-371 z"
+   d="m 8060,28713 c 0,-412 332,-745 743,-745 137,0 264,37 373,100 v -471 h 372 v 1116 744 h -372 v -100 c -109,63 -236,100 -373,100 -411,0 -743,-333 -743,-744 z m 0,0 z m 1116,1 v -2 c 0,-206 -167,-372 -373,-372 -205,0 -372,167 -372,373 0,205 167,372 372,372 206,0 373,-166 373,-371 z"
    id="path64"
-   style="fill:#1a1a1a" /><g
+   style="fill:#ffffff" /><g
    class="com.sun.star.drawing.PolyPolygonShape"
    id="g72"
-   style="fill:#1a1a1a"
-   transform="translate(0,373)">
+   style="fill:#ffffff"
+   transform="translate(0,1)">
     <g
    id="id8"
-   style="fill:#1a1a1a">
+   style="fill:#ffffff">
      <rect
    class="BoundingBox"
    stroke="none"
@@ -193,12 +193,12 @@
    width="375"
    height="1489"
    id="rect69"
-   style="fill:#1a1a1a" />
+   style="fill:#ffffff" />
     </g>
    </g><path
    fill="#66ffcc"
    stroke="none"
-   d="m 9920,27225 h -372 v 372 373 h 372 373 v -373 h -373 z"
+   d="m 9920,26852 h -372 v 372 373 h 372 373 v -373 h -373 z"
    id="path76"
    style="fill:#02ffb4;fill-opacity:1" />
 </svg>

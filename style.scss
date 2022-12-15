@@ -36,6 +36,7 @@ body {
     height: 48px;
   }
   button {
+    cursor: pointer;
     height: 82px;
     padding: 0 24px;
     margin: 0;
@@ -45,16 +46,13 @@ body {
     background-color: transparent;
     border: none;
   }
-  .open {
-    width: calc(100vw);
-  }
   ul {
+    font-size: 0;
     position: fixed;
     top: 82px;
     right: 0;
     width: 0;
-    transition: width 0.5s;
-    background-color: vars.$bg-color;
+    transition: width 0.3s, background-color 0.3s;
     z-index: 100;
     overflow: hidden;
     height: calc(100vh - 102px);
@@ -64,9 +62,24 @@ body {
       width: 100%;
       list-style: none;
       a {
+        font-size: 10px;
+        opacity: 0;
+        transition: font-size 0.4s, opacity 0.2s;
         width: 100%;
         display: flex;
         justify-content: center;
+      }
+    }
+  }
+  .open {
+    background-color: vars.$bg-color;
+    width: 100%;
+    a {
+      transition: color 0.3s;
+      font-size: medium;
+      opacity: 1;
+      &:hover {
+        color: #02ffb4;
       }
     }
   }
@@ -85,7 +98,7 @@ body {
     display: grid;
     @media (min-width: 950px) {
       grid-template-columns: 1.5fr 1fr;
-       grid-template-areas:
+      grid-template-areas:
             "main-box secondary-box1"
             "main-box secondary-box2";
     }
@@ -103,7 +116,7 @@ body {
     }
     div {
       border-radius: 10px;
-      padding: 0px 15px;
+      padding: 0 15px;
       background-color: rgba(75, 89, 89, 0.20);
       h2 {
         font-size: 26px;

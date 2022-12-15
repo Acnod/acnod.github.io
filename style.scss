@@ -45,6 +45,9 @@ body {
     background-color: transparent;
     border: none;
   }
+  .open {
+    width: calc(100vw);
+  }
   ul {
     position: fixed;
     top: 82px;
@@ -165,7 +168,7 @@ body {
         opacity: 0.4;
       }
       li {
-        font-size: 16px;
+        font-size: 15px;
         margin-bottom: 16px;
         list-style-type: none;
         color: rgba(255, 255, 255, 0.9);

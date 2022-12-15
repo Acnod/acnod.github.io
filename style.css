@@ -47,6 +47,9 @@ body {
   background-color: transparent;
   border: none;
 }
+.main-header .open {
+  width: 100vw;
+}
 .main-header ul {
   position: fixed;
   top: 82px;
@@ -168,7 +171,7 @@ body {
   opacity: 0.4;
 }
 .main-footer .links ul li {
-  font-size: 16px;
+  font-size: 15px;
   margin-bottom: 16px;
   list-style-type: none;
   color: rgba(255, 255, 255, 0.9);

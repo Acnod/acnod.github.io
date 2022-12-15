@@ -1,12 +1,9 @@
-let open = Boolean(false);
-let navigationBar = document.getElementById('navigation-bar');
-let navButton = document.getElementById('nav-button');
+let navigationBar = document.getElementById("navigation-bar");
 
 function activeNav(){
-    if (open == Boolean(false)) {
+    if (!navigationBar.classList.contains("open")) {
         navigationBar.classList.add("open")
-        alert(open)
     } else {
-        open = !open
+        navigationBar.classList.remove("open")
     }
 }

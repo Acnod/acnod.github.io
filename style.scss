@@ -54,6 +54,8 @@ body {
     right: 0;
     width: 0;
     transition: width 0.5s;
+    background-color: vars.$bg-color;
+    z-index: 100;
     overflow: hidden;
     height: calc(100vh - 102px);
     padding: 20px 0 0 0;

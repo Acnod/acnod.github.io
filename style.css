@@ -8,6 +8,11 @@ html, body {
   margin: 0;
 }
 
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -48,42 +53,69 @@ body {
   background-color: transparent;
   border: none;
 }
-.main-header ul {
-  font-size: 0;
-  position: fixed;
-  top: 82px;
-  right: 0;
-  width: 0;
-  transition: width 0.3s, background-color 0.3s;
-  z-index: 100;
-  overflow: hidden;
-  height: calc(100vh - 102px);
-  padding: 20px 0 0 0;
-}
 .main-header ul li {
-  display: flex;
-  width: 100%;
   list-style: none;
 }
-.main-header ul li a {
-  font-size: 10px;
-  opacity: 0;
-  transition: font-size 0.4s, opacity 0.2s;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+@media (min-width: 900px) {
+  .main-header button {
+    display: none;
+  }
+  .main-header ul {
+    margin: 0 12px;
+    float: right;
+    position: static;
+    overflow: visible;
+  }
+  .main-header ul li {
+    float: left;
+    display: inline;
+  }
+  .main-header ul li a {
+    transition: opacity 0.3s, color 0.3s;
+  }
+  .main-header ul li a:hover {
+    opacity: 1;
+    color: #02ffb4;
+  }
 }
-.main-header .open {
-  background-color: rgb(35, 38, 42);
-  width: 100%;
-}
-.main-header .open a {
-  transition: color 0.3s;
-  font-size: medium;
-  opacity: 1;
-}
-.main-header .open a:hover {
-  color: #02ffb4;
+@media (max-width: 900px) {
+  .main-header ul {
+    font-size: 0;
+    position: fixed;
+    top: 82px;
+    right: 0;
+    width: 0;
+    transition: width 0.3s, background-color 0.3s;
+    z-index: 100;
+    overflow: hidden;
+    height: calc(100vh - 102px);
+    padding: 20px 0 0 0;
+  }
+  .main-header ul li {
+    display: flex;
+    width: 100%;
+    list-style: none;
+  }
+  .main-header ul li a {
+    font-size: 10px;
+    opacity: 0;
+    transition: font-size 0.4s, opacity 0.2s;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .main-header .open {
+    background-color: rgb(35, 38, 42);
+    width: 100%;
+  }
+  .main-header .open a {
+    transition: color 0.3s;
+    font-size: medium;
+    opacity: 1;
+  }
+  .main-header .open a:hover {
+    color: #02ffb4;
+  }
 }
 
 .main-page h1 {
@@ -137,7 +169,7 @@ body {
   display: flex;
   width: min-content;
   align-items: center;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: 500;
   transition: padding 0.5s, color 0.2s, border-color 0.2s;
   border-bottom: rgba(255, 255, 255, 0.4) solid 2px;
@@ -163,6 +195,9 @@ body {
 
 .main-footer {
   margin: 28px;
+}
+.main-footer .container {
+  max-width: 1350px;
 }
 .main-footer .links {
   display: grid;

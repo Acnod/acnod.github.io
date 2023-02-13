@@ -1,0 +1,57 @@
+@use "sass:color";
+@use "vars";
+
+.footer {
+  .links {
+    margin: 28px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (min-width: 940px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    grid-template-rows: 1fr;
+    grid-column-gap: 28px;
+    grid-row-gap: 28px;
+    ul {
+      padding: 4px 0;
+      margin: 0;
+      h2 {
+        font-size: 16px;
+        margin: 16px 0;
+        opacity: 0.4;
+      }
+      li {
+        font-size: 15px;
+        margin-bottom: 16px;
+        list-style-type: none;
+        color: color.change(vars.$color-white, $alpha: .9);
+        a {
+          line-height: 8px;
+          color: color.change(vars.$color-white, $alpha: .9);
+          text-decoration: none;
+          b {
+            color: vars.$color-aqua;
+            font-weight: 600;
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+  .last {
+    padding-top: 64px;
+    h1 {
+      text-align: center;
+      margin: 0;
+      img {
+        height: 48px;
+      }
+    }
+    p {
+      margin: 8px;
+      text-align: center;
+      font-size: 16px;
+      opacity: 0.4;
+    }
+  }
+}

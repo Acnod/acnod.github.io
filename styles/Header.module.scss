@@ -1,0 +1,100 @@
+@use "vars";
+
+.header {
+  height: 82px;
+  width: 100%;
+  a {
+    height: 82px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    color: vars.$color-white;
+    opacity: 0.7;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .brandLogo {
+    opacity: 1.7;
+  }
+  img {
+    height: 48px;
+  }
+  button {
+    cursor: pointer;
+    height: 82px;
+    padding: 0 24px;
+    margin: 0;
+    float: right;
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+  }
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+  @media (min-width: 900px) {
+    button {
+      display: none;
+    }
+    ul {
+      margin: 0 12px;
+      float: right;
+      position: static;
+      overflow: visible;
+      li {
+        float: left;
+        display: inline;
+        a {
+          transition: opacity 0.3s, color 0.3s;
+          &:hover {
+            opacity: 1;
+            color: vars.$color-aqua;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    ul {
+      font-size: 0;
+      position: fixed;
+      top: 82px;
+      right: 0;
+      width: 0;
+      transition: width 0.3s, background-color 0.3s;
+      z-index: 100;
+      overflow: hidden;
+      height: calc(100vh - 102px);
+      padding: 20px 0 0 0;
+      li {
+        display: flex;
+        width: 100%;
+        list-style: none;
+        a {
+          font-size: 10px;
+          opacity: 0;
+          transition: font-size 0.4s, opacity 0.2s;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    .open {
+      background-color: vars.$color-background;
+      height: 100%;
+      width: 100%;
+      a {
+        transition: color 0.3s;
+        font-size: medium;
+        opacity: 1;
+        &:hover {
+          color: vars.$color-aqua;
+        }
+      }
+    }
+  }
+}

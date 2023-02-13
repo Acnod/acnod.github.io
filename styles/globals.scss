@@ -1,0 +1,37 @@
+@use 'vars';
+
+:root{
+  color-scheme: dark;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  background-color: vars.$color-background;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+._greenText{
+  color: vars.$color-aqua;
+}
+
+// Disable animations for reduced motion users
+@media (prefers-reduced-motion: reduce){
+  *{
+    -webkit-animation-duration: 0s !important;
+    animation-duration: 0s !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

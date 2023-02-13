@@ -1,0 +1,123 @@
+@use "sass:color";
+@use "vars";
+
+.main {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: vars.$color-background;
+  color: rgb(255, 255, 255);
+}
+
+.mainPage {
+  h1 {
+    font-weight: 700;
+    margin: 48px 26px 0 26px;
+    font-size: 26px;
+    span {
+      color: vars.$color-aqua;
+    }
+  }
+  .gridBox {
+    margin: 24px;
+    display: grid;
+    @media (min-width: 950px) {
+      grid-template-columns: 1.5fr 1fr;
+      grid-template-areas:
+        "mainBox secondaryBox1"
+        "mainBox secondaryBox2";
+    }
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "mainBox mainBox"
+      "secondaryBox1 secondaryBox2";
+    gap: 12px 12px;
+    @media (max-width: 384px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas:
+        "mainBox"
+        "secondaryBox1"
+        "secondaryBox2";
+    }
+    div {
+      border-radius: 10px;
+      padding: 0 15px;
+      background-color: vars.$color-foreground;
+      h2 {
+        font-size: 26px;
+        font-weight: 700;
+        margin: 20px 0;
+      }
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 18px 0;
+      }
+      img {
+        width: 80%;
+        margin: 8px 10% 0 10%;
+      }
+      a {
+        text-decoration: none;
+        display: block;
+        width: min-content;
+        color: white;
+        font-size: 18px;
+        height: 28px;
+        margin: 12px 0 24px 0;
+        font-weight: 500;
+        transition: padding 0.5s, color 0.2s, border-color 0.2s;
+        border-bottom: color.change(vars.$color-white, $alpha: .4) solid 2px;
+        &:hover {
+          padding-right: 16px;
+          border-color: vars.$color-aqua;
+        }
+      }
+    }
+    .mainBox {
+      grid-area: mainBox;
+    }
+    .secondBox {
+      grid-area: secondaryBox1;
+    }
+    .thirdBox {
+      grid-area: secondaryBox2;
+    }
+  }
+}
+
+.description {
+  margin-top: 5rem;
+  h1 {
+    font-size: 26px;
+    margin: 24px 24px 0 24px;
+  }
+  ul {
+    margin: 24px;
+    list-style: none;
+    display: grid;
+    @media (min-width: 750px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    gap: 24px;
+    li {
+      background-color: vars.$color-foreground;
+      line-height: 170%;
+      padding: 15px;
+      border-radius: 10px;
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+      img{
+        filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(100deg) saturate(450%);
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

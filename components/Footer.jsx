@@ -53,7 +53,7 @@ export default function Footer() {
                     </div>
                     <div className={styles.last}>
 
-                        <h1><Image src={largeLogo} alt="Acnod" /></h1>
+                        <h1><Image src={largeLogo} height={48} alt="Acnod" /></h1>
                         <p>&copy; 2022 Acnod, all rights reserved</p>
                     </div>
                 </div>

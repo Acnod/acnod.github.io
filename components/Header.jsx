@@ -19,9 +19,9 @@ export default function Header() {
         <>
             <header className={`${styles.header} container`}>
                 <Link className={styles.brandLogo} href="/">
-                    <Image src={smallLogo} alt="Acnod Logo" priority />
+                    <Image src={smallLogo} height={48} alt="Acnod Logo" priority />
                 </Link>
-                <button onClick={openMenu}><Image src={navigationImage}  alt={"Menu button"}/></button>
+                <button onClick={openMenu}><Image src={navigationImage} height={48}  alt={"Menu button"}/></button>
                 <ul id={"navigationBar"}>
                     <li>
                         <Link href={""}>Home</Link>

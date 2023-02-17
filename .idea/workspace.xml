@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14ad01ef-c218-45a7-926e-9b148e052bde" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/acnod.github.io.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_vars.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_vars.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_vars.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/brand/favicon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/brand/large-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/brand/small-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/mejs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/navigation.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Home.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_vars.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +17,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2Lh0SR9bTjQWpmzOGVKNptUNLG5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,7 +30,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Programming/Websites/acnod.github.io",
+    "last_opened_file_path": "C:/Users/jakub.sokol/Desktop/acnod.github.io",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -71,10 +58,22 @@
       <option name="presentableId" value="Default" />
       <updated>1676308007342</updated>
       <workItem from="1676308009295" duration="35000" />
+      <workItem from="1676630739478" duration="637000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

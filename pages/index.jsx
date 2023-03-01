@@ -74,12 +74,12 @@ export default function Home() {
               <li>
                 <BsSpeedometer/>
                 <h2>Optimized</h2>
-                <p>Due to our websites being written on top of Next JS, they're very speedy and optimized.</p>
+                <p>Thanks to our use of Next.js, our websites are optimized for speed and performance.</p>
               </li>
               <li>
                 <BsSliders/>
                 <h2>Customization</h2>
-                <p>Thanks to our use of Next.js, our websites are optimized for speed and performance.</p>
+                <p>We offer flexible customization options to accommodate any changes you desire, ensuring that the final product meets your specifications.</p>
               </li>
             </ul>
           </div>

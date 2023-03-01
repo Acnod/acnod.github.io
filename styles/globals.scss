@@ -11,6 +11,16 @@
 
 html, body{
   background-color: vars.$color-background;
+  font-family: "Montserrat", sans-serif;
+  *{
+    position: relative;
+    z-index: 10;
+  }
+}
+
+a{
+  color: vars.$color-aqua;
+  text-decoration: none;
 }
 
 .container {

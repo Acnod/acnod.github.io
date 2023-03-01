@@ -1,15 +1,15 @@
-import styles from '@/styles/Home.module.scss'
-import Head from '@/components/Head'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import Image from "next/image"
-import boxIcon from "@/public/icons/box-fill.svg"
-import calendarIcon from "@/public/icons/calendar-check-fill.svg"
-import chatIcon from "@/public/icons/chat-dots-fill.svg"
-import layoutIcon from "@/public/icons/layout-text-window.svg"
-import speedIcon from "@/public/icons/speedometer.svg"
-import slidersIcon from "@/public/icons/sliders2.svg"
-import smallLogo from "@/public/brand/small-logo.svg"
+import styles from '@/styles/Home.module.scss';
+import Head from '@/components/Head';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import {
+  BsFillCalendarCheckFill,
+  BsFillChatDotsFill,
+  BsLayoutTextWindow,
+  BsSpeedometer,
+  BsSliders,
+  BsGrid1X2Fill
+} from 'react-icons/bs';
 
 export default function Home() {
   let imageSize = 32;
@@ -18,10 +18,14 @@ export default function Home() {
     <>
       <Head title={"Acnod Team"} />
       <main className={styles.main}>
+        <div className={`${styles.background} container`}>
+          <span/>
+          <span/>
+          <span/>
+        </div>
         <Header />
-        <main className={styles.mainPage}>
-          <div className={"container"}>
-            <h1>
+        <div className={"container"}>
+          <h1>
               Software development and essential design<b className={"_greenText"}>.</b>
             </h1>
             <div className={styles.gridBox}>
@@ -43,40 +47,39 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </main>
         <div className={styles.description}>
           <div className={"container"}>
             <h1>What can we do<b className={"_greenText"}>?</b></h1>
             <ul>
               <li>
-                <Image src={boxIcon} alt={"Lorem"} height={imageSize} />
+                <BsGrid1X2Fill/>
                 <h2>Detailed look</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus maximus posuere dui ut commodo.</p>
+                <p>Our web design services offer a professional, elegant, and simplistic look, while ensuring attention to detail and precision.</p>
               </li>
               <li>
-                <Image src={calendarIcon} alt={"Lorem"} height={imageSize} />
+                <BsFillCalendarCheckFill/>
                 <h2>Delivery</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus maximus posuere dui ut commodo.</p>
+                <p>We are committed to delivering your product on time, and in the event of any unforeseen delays, we will promptly notify you.</p>
               </li>
               <li>
-                <Image src={chatIcon} alt={"Lorem"} height={imageSize} />
+                <BsFillChatDotsFill/>
                 <h2>Fast support</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus maximus posuere dui ut commodo.</p>
+                <p>We strive to respond to your messages within an hour, even outside of regular business hours, with the exception of overnight.</p>
               </li>
               <li>
-                <Image src={layoutIcon} alt={"Lorem"} height={imageSize} />
+                <BsLayoutTextWindow/>
                 <h2>Responsibility</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus maximus posuere dui ut commodo.</p>
+                <p>Our websites provide a full responsibility for mobile, tablets and desktops.</p>
               </li>
               <li>
-                <Image src={speedIcon} alt={"Lorem"} height={imageSize} />
+                <BsSpeedometer/>
                 <h2>Optimized</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus maximus posuere dui ut commodo.</p>
+                <p>Due to our websites being written on top of Next JS, they're very speedy and optimized.</p>
               </li>
               <li>
-                <Image src={slidersIcon} alt={"Lorem"} height={imageSize} />
+                <BsSliders/>
                 <h2>Customization</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus maximus posuere dui ut commodo.</p>
+                <p>Thanks to our use of Next.js, our websites are optimized for speed and performance.</p>
               </li>
             </ul>
           </div>

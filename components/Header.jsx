@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import styles from '@/styles/Header.module.scss'
-import $ from 'jquery'
-import smallLogo from '@/public/brand/small-logo.svg'
-import navigationImage from '@/public/navigation.svg'
+import Image from 'next/image';
+import styles from '@/styles/Header.module.scss';
+import $ from 'jquery';
+import smallLogo from '@/public/brand/small-logo.svg';
+import navigationImage from '@/public/navigation.svg';
 import Link from "next/link";
 
 export default function Header() {
@@ -27,7 +27,7 @@ export default function Header() {
                         <Link href={""}>Home</Link>
                     </li>
                     <li>
-                        <Link href={""}>About</Link>
+                        <Link href={"/products"}>Products</Link>
                     </li>
                     <li>
                         <Link href={""}>Support</Link>

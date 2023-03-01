@@ -2,14 +2,7 @@
 @use "vars";
 
 .main {
-  padding: 0;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  background-color: vars.$color-background;
   color: rgb(255, 255, 255);
-}
-
-.mainPage {
   h1 {
     font-weight: 700;
     margin: 48px 26px 0 26px;
@@ -116,10 +109,48 @@
       p {
         font-size: 16px;
       }
-      img{
-        filter: brightness(0.9) invert(.7) sepia(.5) hue-rotate(100deg) saturate(450%);
+      svg{
+        height: 32px;
+        width: 32px;
+        fill: vars.$color-aqua;
         margin-bottom: 5px;
       }
+    }
+  }
+}
+
+.background{
+  position: relative;
+  top: 0;
+  z-index: 0;
+  span{
+    border-radius: 50%;
+    filter: blur(70px);
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 200px;
+    opacity: 20%;
+    &:nth-child(1){
+      width: 400px;
+      background-color: rgb(2, 255, 180);
+      left: 50%;
+      transform: translateX(-50%);
+      top: -100px;
+    }
+    &:nth-child(2){
+      top: 40rem;
+      background-color: rgb(0, 163, 255);
+      left: 0;
+    }
+    &:nth-child(3){
+      top: 15rem;
+      background-color: rgb(0, 224, 255);
+      right: 0;
+    }
+    @media (min-width: 1200px) {
+      filter: blur(200px);
+      opacity: 100%;
     }
   }
 }

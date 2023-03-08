@@ -24,7 +24,7 @@ export default function Header() {
                 <button onClick={openMenu}><Image src={navigationImage} height={48}  alt={"Menu button"}/></button>
                 <ul id={"navigationBar"}>
                     <li>
-                        <Link href={""}>Home</Link>
+                        <Link href={"/"}>Home</Link>
                     </li>
                     <li>
                         <Link href={"/products"}>Products</Link>

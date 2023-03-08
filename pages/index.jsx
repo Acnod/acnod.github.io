@@ -10,18 +10,28 @@ import {
   BsSliders,
   BsGrid1X2Fill
 } from 'react-icons/bs';
+import GlowingButton from "@/components/GlowingButton";
+import gbStyles from "@/styles/GlowingButton.module.scss";
+import {useRef} from "react";
+import Image from "next/image";
+// import saturn from "@/public/saturn.png";
 
 export default function Home() {
-  let imageSize = 32;
+  const ref = useRef();
+  const borderSize = 5,
+      glowSize = "50px -10px",
+      gradientSize = "400px";
+
 
   return (
     <>
       <Head title={"Acnod Team"} />
       <main className={styles.main}>
         <div className={`${styles.background} container`}>
-          <span/>
-          <span/>
-          <span/>
+          {/*<Image src={saturn} alt={""} height={300}/>*/}
+          {/*  <span/>*/}
+          {/*  <span/>*/}
+          {/*  <span/>*/}
         </div>
         <Header />
         <div className={"container"}>
@@ -47,39 +57,81 @@ export default function Home() {
               </div>
             </div>
           </div>
-        <div className={styles.description}>
+        <div className={`${styles.description} ${gbStyles.container}`} ref={ref}>
           <div className={"container"}>
             <h1>What can we do<b className={"_greenText"}>?</b></h1>
             <ul>
+              {/*<li>*/}
+              {/*  <BsGrid1X2Fill/>*/}
+              {/*  <h2>Detailed look</h2>*/}
+              {/*  <p>Our web design services offer a professional, elegant, and simplistic look, while ensuring attention to detail and precision.</p>*/}
+              {/*</li>*/}
+              {/*<li>*/}
+              {/*  <BsFillCalendarCheckFill/>*/}
+              {/*  <h2>Delivery</h2>*/}
+              {/*  <p>We are committed to delivering your product on time, and in the event of any unforeseen delays, we will promptly notify you.</p>*/}
+              {/*</li>*/}
+              {/*<li>*/}
+              {/*  <BsFillChatDotsFill/>*/}
+              {/*  <h2>Fast support</h2>*/}
+              {/*  <p>We strive to respond to your messages within an hour, even outside of regular business hours, with the exception of overnight.</p>*/}
+              {/*</li>*/}
+              {/*<li>*/}
+              {/*  <BsLayoutTextWindow/>*/}
+              {/*  <h2>Responsive</h2>*/}
+              {/*  <p>Our websites provide great responsiveness for mobile, tablets and desktops.</p>*/}
+              {/*</li>*/}
+              {/*<li>*/}
+              {/*  <BsSpeedometer/>*/}
+              {/*  <h2>Optimized</h2>*/}
+              {/*  <p>Thanks to our use of Next.js, our websites are optimized for speed and performance.</p>*/}
+              {/*</li>*/}
+              {/*<li>*/}
+              {/*  <BsSliders/>*/}
+              {/*  <h2>Customization</h2>*/}
+              {/*  <p>We offer flexible customization options to accommodate any changes you desire, ensuring that the final product meets your specifications.</p>*/}
+              {/*</li>*/}
               <li>
+                <GlowingButton borderSize={borderSize}  gradientSize={gradientSize} glowSize={glowSize} container={ref}>
                 <BsGrid1X2Fill/>
                 <h2>Detailed look</h2>
                 <p>Our web design services offer a professional, elegant, and simplistic look, while ensuring attention to detail and precision.</p>
+                </GlowingButton>
               </li>
               <li>
+                <GlowingButton borderSize={borderSize}  gradientSize={gradientSize} glowSize={glowSize} container={ref}>
                 <BsFillCalendarCheckFill/>
                 <h2>Delivery</h2>
                 <p>We are committed to delivering your product on time, and in the event of any unforeseen delays, we will promptly notify you.</p>
+                </GlowingButton>
               </li>
               <li>
+                <GlowingButton borderSize={borderSize}  gradientSize={gradientSize} glowSize={glowSize} container={ref}>
                 <BsFillChatDotsFill/>
                 <h2>Fast support</h2>
                 <p>We strive to respond to your messages within an hour, even outside of regular business hours, with the exception of overnight.</p>
+                </GlowingButton>
               </li>
               <li>
+                <GlowingButton borderSize={borderSize}  gradientSize={gradientSize} glowSize={glowSize} container={ref}>
                 <BsLayoutTextWindow/>
-                <h2>Responsibility</h2>
-                <p>Our websites provide a full responsibility for mobile, tablets and desktops.</p>
+                <h2>Responsive</h2>
+                <p>Our websites provide great responsiveness for mobile, tablets and desktops.</p>
+                </GlowingButton>
               </li>
               <li>
+                <GlowingButton borderSize={borderSize}  gradientSize={gradientSize} glowSize={glowSize} container={ref}>
                 <BsSpeedometer/>
                 <h2>Optimized</h2>
                 <p>Thanks to our use of Next.js, our websites are optimized for speed and performance.</p>
+                </GlowingButton>
               </li>
               <li>
+                <GlowingButton borderSize={borderSize}  gradientSize={gradientSize} glowSize={glowSize} container={ref}>
                 <BsSliders/>
                 <h2>Customization</h2>
                 <p>We offer flexible customization options to accommodate any changes you desire, ensuring that the final product meets your specifications.</p>
+                </GlowingButton>
               </li>
             </ul>
           </div>

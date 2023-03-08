@@ -42,7 +42,7 @@ export default function Footer() {
                             </li>
                         </ul>
                         <ul>
-                            <h2>Contacts</h2>
+                            <h2>Contact</h2>
                             <li>
                                 <span>Email </span>
                                 <a href="mailto:hello@acnod.net">

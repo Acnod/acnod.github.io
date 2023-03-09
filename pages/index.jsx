@@ -56,6 +56,39 @@ export default function Home() {
                 </h3>
               </div>
             </div>
+            <div className={styles.languages}>
+              <div className={"container"}>
+                <h2>
+                  Our tech stack for development.
+                </h2>
+                <ul>
+                  <li>
+                    C#
+                  </li>
+                  <li>
+                    CSS
+                  </li>
+                  <li>
+                    HTML
+                  </li>
+                  <li>
+                    Java
+                  </li>
+                  <li>
+                    JavaScript
+                  </li>
+                  <li>
+                    JQuery
+                  </li>
+                  <li>
+                    NextJS
+                  </li>
+                  <li>
+                    SCSS
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         <div className={`${styles.description} ${gbStyles.container}`} ref={ref}>
           <div className={"container"}>

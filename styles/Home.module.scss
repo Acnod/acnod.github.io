@@ -11,78 +11,140 @@
       color: vars.$color-aqua;
     }
   }
-  .gridBox {
-    margin: 24px;
-    display: grid;
-    @media (min-width: 950px) {
-      grid-template-columns: 1.5fr 1fr;
+  .middleContainer {
+    display: flex;
+    flex-direction: row;
+    .gridBox {
+      margin: 24px;
+      display: grid;
+      @media (min-width: 950px) {
+        width: 60%;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-areas:
+          "mainBox secondaryBox1"
+          "mainBox secondaryBox2";
+      }
+      grid-template-columns: 1fr 1fr;
       grid-template-areas:
-        "mainBox secondaryBox1"
-        "mainBox secondaryBox2";
-    }
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "mainBox mainBox"
-      "secondaryBox1 secondaryBox2";
-    gap: 12px 12px;
-    @media (max-width: 384px) {
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-areas:
-        "mainBox"
-        "secondaryBox1"
-        "secondaryBox2";
-    }
-    div {
-      border-radius: 10px;
-      padding: 0 15px;
-      box-shadow: vars.$box-shadow-default;
-      background-color: vars.$color-foreground;
-      h2 {
-        font-size: 26px;
-        font-weight: 700;
-        margin: 20px 0;
+        "mainBox mainBox"
+        "secondaryBox1 secondaryBox2";
+      gap: 12px 12px;
+      @media (max-width: 384px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+          "mainBox"
+          "secondaryBox1"
+          "secondaryBox2";
       }
-      h3 {
-        font-size: 18px;
-        font-weight: 600;
-        margin: 18px 0;
-      }
-      img {
-        width: 80%;
-        margin: 8px 10% 0 10%;
-      }
-      a {
-        text-decoration: none;
-        display: block;
-        width: min-content;
-        color: white;
-        font-size: 18px;
-        height: 28px;
-        margin: 12px 0 24px 0;
-        font-weight: 500;
-        transition: padding 0.5s, color 0.2s, border-color 0.2s;
-        border-bottom: color.change(vars.$color-white, $alpha: .4) solid 2px;
-        &:hover {
-          padding-right: 16px;
-          border-color: vars.$color-aqua;
+
+      div {
+        border-radius: 10px;
+        padding: 0 15px;
+        box-shadow: vars.$box-shadow-default;
+        background-color: vars.$color-foreground;
+
+        h2 {
+          font-size: 26px;
+          font-weight: 700;
+          margin: 20px 0;
+        }
+
+        h3 {
+          font-size: 18px;
+          font-weight: 600;
+          margin: 18px 0;
+        }
+
+        img {
+          width: 80%;
+          margin: 8px 10% 0 10%;
+        }
+
+        a {
+          text-decoration: none;
+          display: block;
+          width: min-content;
+          color: white;
+          font-size: 18px;
+          height: 28px;
+          margin: 12px 0 24px 0;
+          font-weight: 500;
+          transition: padding 0.5s, color 0.2s, border-color 0.2s;
+          border-bottom: color.change(vars.$color-white, $alpha: .4) solid 2px;
+
+          &:hover {
+            padding-right: 16px;
+            border-color: vars.$color-aqua;
+          }
         }
       }
+
+      .mainBox {
+        grid-area: mainBox;
+      }
+
+      .secondBox {
+        grid-area: secondaryBox1;
+      }
+
+      .thirdBox {
+        grid-area: secondaryBox2;
+      }
     }
-    .mainBox {
-      grid-area: mainBox;
+
+    #modelContainer{
+      display: block;
     }
-    .secondBox {
-      grid-area: secondaryBox1;
-    }
-    .thirdBox {
-      grid-area: secondaryBox2;
+  }
+}
+
+.languages {
+  h2 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 12px 26px 10px 26px;
+  }
+  ul {
+    margin: 0 18px;
+    li {
+      background: vars.$color-foreground;
+      //background: linear-gradient(90deg, vars.$color-aqua -80%, vars.$color-foreground 290%);
+      color: vars.$color-white;
+      box-shadow: vars.$box-shadow-default;
+      height: 42px;
+      border-radius: 24px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 10px 12px 0;
+      cursor: default;
+      transition: color 0.3s;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 24px;
+        background: linear-gradient(90deg, vars.$color-aqua -80%, vars.$color-foreground 290%);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      &:hover {
+        color: vars.$color-foreground;
+      }
+      &:hover::before{
+        opacity: 1;
+      }
     }
   }
 }
 
 .description {
   margin-top: 5rem;
-  padding-bottom: 3rem;
   h1 {
     font-size: 26px;
     margin: 24px 24px 0 24px;
@@ -104,14 +166,6 @@
       padding: 15px;
       border-radius: 10px;
       box-shadow: vars.$box-shadow-default;
-      &:nth-child(1n+0){
-        background-color: unset;
-        line-height: 170%;
-        box-shadow: unset;
-        padding: unset;
-        border-radius: 10px;
-        height: 100%;
-      }
       h2 {
         font-size: 20px;
       }
@@ -127,30 +181,8 @@
     }
   }
 }
-.languages {
-  h2 {
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 1.4;
-    margin: 12px 26px 10px 26px;
-  }
-  ul {
-    margin: 0 18px;
-    li {
-      background: linear-gradient(90deg, vars.$color-aqua -80%, vars.$color-foreground 290%);
-      color: vars.$color-foreground;
-      box-shadow: vars.$box-shadow-default;
-      height: 48px;
-      border-radius: 24px;
-      padding: 0 22px;
-      display: inline-flex;
-      align-items: center;
-      font-size: 18px;
-      font-weight: 600;
-      margin: 0 10px 12px 0;
-    }
-  }
-}
+
+
 
 
 

@@ -1,4 +1,5 @@
 @use 'vars';
+@use 'sass:color';
 
 :root{
   color-scheme: dark;
@@ -10,8 +11,20 @@
 }
 
 html, body{
-  background-color: vars.$color-background;
   font-family: "Montserrat", sans-serif;
+
+  // Background dots
+  $dot-color: color.adjust(vars.$color-foreground);
+  $dot-color: color.adjust(vars.$color-foreground, $alpha: -.1);
+  $dot-size: 3px;
+  $dot-spacing: 30px;
+  background:
+          linear-gradient(90deg, vars.$color-background ($dot-spacing - $dot-size), transparent 1%) center,
+          linear-gradient(vars.$color-background ($dot-spacing - $dot-size), transparent 1%) center, $dot-color;
+  background-size: $dot-spacing $dot-spacing;
+  background-position-y: $dot-spacing / 1.6;
+  background-position-x: $dot-spacing / 2;
+  //background-color: vars.$color-background;
   *{
     position: relative;
     z-index: 10;

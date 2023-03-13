@@ -19,18 +19,13 @@ import $ from "jquery";
 
 
 export default function Home() {
-  const ref = useRef();
-  const borderSize = 5,
-      glowSize = "50px -10px",
-      gradientSize = "400px";
 
-  useEffect(() => {/*
+  useEffect(() => {
     let controls;
 
     const mesh = new THREE.Mesh();
 
     const scene = new THREE.Scene();
-    // scene.background = new THREE.Color(0, 0, 0);
 
     const pointLight1 = new THREE.PointLight(0xffffff, 1);
     pointLight1.position.set(100, 50, 400);
@@ -46,21 +41,23 @@ export default function Home() {
     material.flatShading = true;
     material.side = THREE.DoubleSide;
 
+    const model = $(`#${styles.model}`);
+    console.log(model)
+
     const sizes = {
-      width: window.innerWidth,
-      height: window.innerHeight
+      width: model[0].clientWidth,
+      height: model[0].clientHeight
     };
 
     const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 2000);
 
-    const renderer = new THREE.WebGLRenderer( { alpha: true } );
-    renderer.setClearColor( 0x000000, 0 );
+    const renderer = new THREE.WebGLRenderer();
 
     let effect;
 
     let characters = ' .:-+*=%@#';
     const effectSize = { amount: .205 };
-    let backgroundColor = 'black';
+    let backgroundColor = 'transparent';
     let ASCIIColor = 'white';
 
     function createEffect() {
@@ -68,37 +65,11 @@ export default function Home() {
       effect.setSize(sizes.width, sizes.height);
       effect.domElement.style.color = ASCIIColor;
       effect.domElement.style.backgroundColor = backgroundColor;
-    }*/
-
-    // createEffect();
-
-
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
-    const renderer = new THREE.WebGLRenderer( { alpha: true } );
-    renderer.setClearColor( 0x000000, 0 );
-    $(`#${styles.modelContainer}`).append(renderer.domElement);
-
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-    const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-    const cube = new THREE.Mesh( geometry, material );
-
-    scene.add( cube );
-
-    camera.position.z = 5;
-    function animate() {
-
-      requestAnimationFrame( animate );
-      cube.rotation.x += 0.01;
-
-      cube.rotation.y += 0.01;
-      renderer.render( scene, camera );
     }
-    animate()
-    // $(`#${styles.modelContainer}`).append(effect.domElement);
-/*
+    createEffect();
+
+    model.append(effect.domElement);
+
     stlLoader.load(
         'brand/model.stl',
         function (geometry) {
@@ -112,7 +83,7 @@ export default function Home() {
           geometry.computeVertexNormals();
           mesh.geometry.center();
 
-          mesh.rotation.x = -90 * Math.PI / 180;
+          mesh.rotation.x = (-90 * Math.PI / 180).toFixed(2);
           mesh.rotation.z = 90 * Math.PI / 180;
 
           // mesh.rotation.x += -5 * Math.PI / 180;
@@ -129,15 +100,33 @@ export default function Home() {
           scene.add(mesh);
           controls = new OrbitControls(camera, effect.domElement);
 
+          let box = new THREE.Box3().setFromObject( mesh )
+          let center = new THREE.Vector3();
+          box.getCenter( center );
+          mesh.position.sub( center );
+
+          let pauseAnimation = false;
+
+          controls.addEventListener('change', function() {
+            pauseAnimation = true;
+          });
+
+          controls.addEventListener('end', function() {
+            pauseAnimation = false;
+          });
+
           function render() {
             window.requestAnimationFrame(render);
-            mesh.rotation.z += 0.01;
+            if (!pauseAnimation){
+              mesh.rotation.z += 0.005;
+              mesh.rotation.y += 0.005;
+            }
             effect.render(scene, camera);
           }
           render()
         }
-    )*/
-  })
+    )
+  }, [])
 
   return (
     <>
@@ -173,8 +162,7 @@ export default function Home() {
                 </h3>
               </div>
             </div>
-            <div id={styles.modelContainer}>
-            </div>
+            <div id={styles.modelContainer}><div id={styles.model}/></div>
           </div>
             <div className={styles.languages}>
               <div className={"container"}>

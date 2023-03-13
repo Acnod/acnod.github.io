@@ -13,7 +13,9 @@
   }
   .middleContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    //align-items: center;
+    width: 100%;
     .gridBox {
       margin: 24px;
       display: grid;
@@ -93,7 +95,23 @@
     }
 
     #modelContainer{
-      display: block;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      #model{
+        display: block;
+        height: 200px;
+        width: 200px;
+        user-select: none;
+      }
+    }
+
+    @media (min-width: 950px) {
+      flex-direction: row;
+      #modelContainer{
+        width: auto;
+        width: 30%;
+      }
     }
   }
 }

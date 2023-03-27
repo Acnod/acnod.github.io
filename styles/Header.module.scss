@@ -58,6 +58,9 @@
     }
   }
   @media (max-width: 900px) {
+    position: sticky;
+    top: 0;
+    background-color: vars.$color-background;
     ul {
       font-size: 0;
       position: fixed;

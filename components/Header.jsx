@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import styles from '@/styles/Header.module.scss';
-import $ from 'jquery';
 import smallLogo from '@/public/brand/small-logo.svg';
 import navigationImage from '@/public/navigation.svg';
+import $ from "jquery";
 import Link from "next/link";
 
 export default function Header() {

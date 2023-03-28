@@ -6,7 +6,7 @@ import Link from "next/link";
 import { AiFillClockCircle } from 'react-icons/ai';
 import Image from "next/image";
 
-export default function Home() {
+export default function Products() {
 
   return (
     <>

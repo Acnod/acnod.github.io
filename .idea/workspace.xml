@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14ad01ef-c218-45a7-926e-9b148e052bde" name="Changes" comment="">
+    <list default="true" id="14ad01ef-c218-45a7-926e-9b148e052bde" name="Changes" comment="New web design">
+      <change afterPath="$PROJECT_DIR$/pages/support/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/Support.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Home.module.scss" afterDir="false" />
     </list>
-    <list id="660d6438-50c0-436b-97ce-4767d6b27a10" name="Changes by Jakooob" comment="" />
+    <list id="660d6438-50c0-436b-97ce-4767d6b27a10" name="Changes by Jakooob" comment="">
+      <change beforePath="$PROJECT_DIR$/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/products/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/index.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,8 +24,25 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/pages/index.jsx">
+      <ranges>
+        <range start1="57" end1="58" start2="57" end2="58" changelist="14ad01ef-c218-45a7-926e-9b148e052bde" />
+        <range start1="60" end1="61" start2="60" end2="63" changelist="14ad01ef-c218-45a7-926e-9b148e052bde" />
+        <range start1="101" end1="101" start2="103" end2="104" changelist="14ad01ef-c218-45a7-926e-9b148e052bde" />
+        <range start1="141" end1="165" start2="144" end2="152" changelist="660d6438-50c0-436b-97ce-4767d6b27a10" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -31,19 +55,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jakub.sokol/Desktop/acnod.github.io&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "last_opened_file_path": "C:/Users/Skymmel/WebstormProjects/acnod.github.io/styles",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Skymmel\WebstormProjects\acnod.github.io\styles" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -73,6 +104,8 @@
       <workItem from="1679334454389" duration="62000" />
       <workItem from="1679335173727" duration="10000" />
       <workItem from="1679430086202" duration="36000" />
+      <workItem from="1679935447358" duration="6022000" />
+      <workItem from="1680032146693" duration="3794000" />
     </task>
     <servers />
   </component>
@@ -89,5 +122,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="New web design" />
+    <option name="LAST_COMMIT_MESSAGE" value="New web design" />
   </component>
 </project>

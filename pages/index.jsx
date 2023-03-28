@@ -55,10 +55,12 @@ export default function Home() {
 
     let effect;
 
-    let characters = ' .:-+*=%@#';
+    let characters = ' .:-+*=%#@';
     const effectSize = { amount: .205 };
     let backgroundColor = 'transparent';
-    let ASCIIColor = '#626b76';
+
+      // let ASCIIColor = '#02ffb4';
+      let ASCIIColor = '#00ae86';
 
     function createEffect() {
       effect = new AsciiEffect(renderer, characters, { invert: true, resolution: effectSize.amount });
@@ -99,6 +101,7 @@ export default function Home() {
 
           scene.add(mesh);
           controls = new OrbitControls(camera, effect.domElement);
+          controls.enableZoom = false;
 
           let box = new THREE.Box3().setFromObject( mesh )
           let center = new THREE.Vector3();
@@ -139,30 +142,14 @@ export default function Home() {
             <h1>Software development and essential design<span>.</span></h1>
             <div className={styles.languages}>
               <ul>
-                <li>
-                  <p>C#</p>
-                </li>
-                <li>
-                  <p>CSS</p>
-                </li>
-                <li>
-                  <p>HTML</p>
-                </li>
-                <li>
-                  <p>Java</p>
-                </li>
-                <li>
-                  <p>JavaScript</p>
-                </li>
-                <li>
-                  <p>JQuery</p>
-                </li>
-                <li>
-                  <p>NextJS</p>
-                </li>
-                <li>
-                  <p>SCSS</p>
-                </li>
+                <li><p>C#</p></li>
+                <li><p>CSS</p></li>
+                <li><p>HTML</p></li>
+                <li><p>Java</p></li>
+                <li><p>JavaScript</p></li>
+                <li><p>JQuery</p></li>
+                <li><p>NextJS</p></li>
+                <li><p>SCSS</p></li>
               </ul>
             </div>
               <a href={"#"} className={styles.button}>Learn more</a>

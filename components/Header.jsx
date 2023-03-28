@@ -30,7 +30,7 @@ export default function Header() {
                         <Link href={"/products"}>Products</Link>
                     </li>
                     <li>
-                        <Link href={""}>Support</Link>
+                        <Link href={"/support"}>Support</Link>
                     </li>
                 </ul>
             </header>

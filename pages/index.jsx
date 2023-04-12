@@ -15,7 +15,6 @@ import Link from "next/link";
 
 
 export default function Home() {
-
   Acnod3DLogo();
 
   return (

@@ -1,0 +1,60 @@
+@use 'vars';
+@use 'sass:color';
+
+:root{
+  color-scheme: dark;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  font-family: "Montserrat", sans-serif;
+
+  // Background dots
+  //$dot-color: color.adjust(vars.$color-foreground);
+  //$dot-color: color.adjust(vars.$color-foreground, $alpha: -.1);
+  //$dot-size: 3px;
+  //$dot-spacing: 30px;
+  //background:
+  //        linear-gradient(90deg, vars.$color-background ($dot-spacing - $dot-size), transparent 1%) center,
+  //        linear-gradient(vars.$color-background ($dot-spacing - $dot-size), transparent 1%) center, $dot-color;
+  //background-size: $dot-spacing $dot-spacing;
+  //background-position-y: $dot-spacing / 1.6;
+  //background-position-x: $dot-spacing / 2;
+  background-color: vars.$color-background;
+  *{
+    position: relative;
+    z-index: 10;
+  }
+}
+
+a{
+  color: vars.$color-aqua;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+._greenText{
+  color: vars.$color-aqua;
+}
+
+// Disable animations for reduced motion users
+@media (prefers-reduced-motion: reduce){
+  *{
+    -webkit-animation-duration: 0s !important;
+    animation-duration: 0s !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

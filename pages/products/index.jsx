@@ -4,7 +4,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from "next/link";
 import { AiFillClockCircle } from 'react-icons/ai';
-import Image from "next/image";
 
 export default function Products() {
 
@@ -60,30 +59,9 @@ export default function Products() {
                   </li>
                 </ul>
               </li>
-              <li className={styles.__product}>
-                <h2>Minecraft modding</h2>
-                <ul>
-                  <li>
-                    <div>
-                      <h3>Simple mod</h3>
-                      <h3>€30</h3>
-                    </div>
-                    <p>A simple mod with basic features.</p>
-                    <p><AiFillClockCircle/> 7 Days Delivery *</p>
-                  </li>
-                  <li>
-                    <div>
-                      <h3>Advanced mod</h3>
-                      <h3>€65</h3>
-                    </div>
-                    <p>A medium sized mod with a more advanced functionality.</p>
-                    <p><AiFillClockCircle/> 14 Days Delivery *</p>
-                  </li>
-                </ul>
-              </li>
             </ul>
           <ul className={styles.addition}>
-            <li>Web-hosting is not included. You will need to put it on a web-host yourself.</li>
+            <li>Web-hosting is not included. You will need to put it on a web-host yourself. With which we can help you.</li>
             <li>The website will be made with <Link href={"https://nextjs.org/"}>Next JS</Link>. This is because Next JS is faster and more performant over basic HTML and we can make the website faster. <br/>If you really want to we can make the website in basic HTML for you.</li>
             <li>* Delivery times may be adjusted due to our schedule.</li>
           </ul>

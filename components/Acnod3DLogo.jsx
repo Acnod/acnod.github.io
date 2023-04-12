@@ -89,6 +89,8 @@ export default function Acnod3DLogo() {
                 scene.add(mesh);
                 controls = new OrbitControls(camera, effect.domElement);
                 controls.enableZoom = false;
+                controls.enablePan = false;
+                controls.enableDamping = true;
 
                 let box = new THREE.Box3().setFromObject( mesh )
                 let center = new THREE.Vector3();

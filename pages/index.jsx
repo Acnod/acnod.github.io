@@ -11,6 +11,7 @@ import {
   BsGrid1X2Fill
 } from 'react-icons/bs';
 import Acnod3DLogo from "@/components/Acnod3DLogo";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -38,7 +39,7 @@ export default function Home() {
                 <li><p>SCSS</p></li>
               </ul>
             </div>
-              <a href={"#"} className={styles.button}>Learn more</a>
+              <Link href={"/products"} className={styles.button}>Learn more</Link>
           </div>
           <div id={styles.modelContainer}><div id={styles.model}/></div>
             </div>

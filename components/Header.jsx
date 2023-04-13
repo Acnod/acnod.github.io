@@ -27,7 +27,7 @@ export default function Header() {
                         <Link href={"/"}>Home</Link>
                     </li>
                     <li>
-                        <Link href={"/products"}>Products</Link>
+                        <Link href={"/portfolio"}>Portfolio</Link>
                     </li>
                 </ul>
             </header>

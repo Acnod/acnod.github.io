@@ -11,9 +11,13 @@ import {
   BsGrid1X2Fill
 } from 'react-icons/bs';
 import Acnod3DLogo from "@/components/Acnod3DLogo";
+import avatarSkymmel from "@/public/skymmel.jpg";
+import avatarJakooob from "@/public/jakooob.jpg";
+import Image from 'next/image'
 import Link from "next/link";
+import Languages from "@/components/Languages";
 
-
+let avatarSize = 146;
 export default function Home() {
   Acnod3DLogo();
 
@@ -27,24 +31,15 @@ export default function Home() {
           <div>
             <h1>Software development and essential design<span>.</span></h1>
             <div className={styles.languages}>
-              <ul>
-                <li><p>C#</p></li>
-                <li><p>CSS</p></li>
-                <li><p>HTML</p></li>
-                <li><p>Java</p></li>
-                <li><p>JavaScript</p></li>
-                <li><p>JQuery</p></li>
-                <li><p>NextJS</p></li>
-                <li><p>SCSS</p></li>
-              </ul>
+              <Languages languages={['C#', 'CSS', 'HTML', 'Java', 'JavaScript', 'JQuery', 'NextJS', 'SCSS']}/>
             </div>
-              <Link href={"/products"} className={styles.button}>Learn more</Link>
+              <Link href={"/portfolio"} className={styles.button}>Learn more</Link>
           </div>
           <div id={styles.modelContainer}><div id={styles.model}/></div>
             </div>
         </div>
       </main>
-      <div className={styles.description}>
+      <section className={styles.description}>
         <div className={"container"}>
           <h1>What can we do<b className={"_greenText"}>?</b></h1>
           <ul>
@@ -80,7 +75,32 @@ export default function Home() {
             </li>
           </ul>
         </div>
-      </div>
+      </section>
+      <section className={styles.aboutUs} id={"aboutUs"}>
+        <div className={"container"}>
+          <h1>Learn about us<span>.</span></h1>
+          <div className={styles.groupMembers}>
+            <div className={styles.member}>
+              <div className={styles.avatarWrapper}>
+                <a href={"https://skymmel.eu"} target={"_blank"}>
+                  <Image src={avatarSkymmel} alt={"avatar"} width={avatarSize} height={avatarSize}/>
+                </a>
+              </div>
+              <h2>Wilhelm Skyba</h2>
+              <p>Designer & Developer</p>
+            </div>
+            <div className={styles.member}>
+              <div className={styles.avatarWrapper}>
+                <a href={"https://jakooob.me"} target={"_blank"}>
+                  <Image src={avatarJakooob} alt={"avatar"} width={avatarSize} height={avatarSize}/>
+                </a>
+              </div>
+              <h2>Jakub Sokol</h2>
+              <p>Developer</p>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </>
   )

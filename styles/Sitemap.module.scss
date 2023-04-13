@@ -1,0 +1,22 @@
+.main{
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+  min-height: calc(100vh - 29rem);
+}
+
+.sitemap{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  span{
+    text-align: center;
+    font-size: 24px;
+  }
+  @media (max-width: 480px){
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 300px){
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

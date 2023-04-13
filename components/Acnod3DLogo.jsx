@@ -29,7 +29,6 @@ export default function Acnod3DLogo() {
         material.side = THREE.DoubleSide;
 
         const model = $(`#${styles.model}`);
-        console.log(model)
 
         const sizes = {
             width: model[0].clientWidth,

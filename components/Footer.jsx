@@ -8,53 +8,49 @@ export default function Footer() {
         <>
             <footer className={styles.footer}>
                 <div className={"container"}>
-                    <div className={styles.links}>
-                        <ul>
-                            <h2>Information</h2>
-                            <li>
-                                <Link href={"/about"}>About</Link>
-                            </li>
-                        </ul>
-                        <ul>
-                            <h2>Products</h2>
-                            <li>
-                                <Link href={"products#website"}>
-                                    Website building
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={"products#design"}>
-                                    Graphic design
-                                </Link>
-                            </li>
-                        </ul>
-                        <ul>
-                            <h2>Socials</h2>
-                            <li>
-                                <a href={"https://twitter.com/AcnodTeam"}>
-                                    Twitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href={""}>
-                                    LinkedIn
-                                </a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <h2>Contact</h2>
-                            <li>
-                                <span>Email </span>
-                                <a href="mailto:hello@acnod.net">
-                                    <b>hello@acnod.net</b>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className={styles.last}>
+                    <div className={styles.footerWrapper}>
+                        <div className={styles.linkContent}>
+                            <div>
+                                <h3>Navigation</h3>
+                                <ul>
+                                    <li>
+                                        <Link href={"/"}>Home</Link>
+                                    </li>
+                                    <li>
+                                        <Link href={"/portfolio"}>Portfolio</Link>
+                                    </li>
 
-                        <h1><Image src={largeLogo} height={48} alt="Acnod" /></h1>
-                        <p>&copy; 2022 Acnod, all rights reserved</p>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3>Follow us</h3>
+                                <ul>
+                                    <li>
+                                        <a href={"https://twitter.com/AcnodTeam"} target={"_blank"}>Twitter</a>
+                                    </li>
+                                    <li>
+                                        <a href={"https://discord.gg/78x8j5tJfx"} target={"_blank"}>Discord</a>
+                                    </li>
+                                    <li>
+                                        <a href={"https://instagram.com/AcnodTeam"} target={"_blank"}>Instagram</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className={styles.contactContent}>
+                            <div className={styles.wrapper}>
+                                <h3>Contact us</h3>
+                                <a href={"mailto:hello@acnod.net"}>hello@acnod.net</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.lastFooter}>
+                        <h1>
+                            <Image src={largeLogo} alt={"Acnod Team"} height={50}/>
+                        </h1>
+                        <p>
+                            &copy; 2023 Acnod Team
+                        </p>
                     </div>
                 </div>
             </footer>

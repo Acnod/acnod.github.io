@@ -82,7 +82,7 @@ export default function Home() {
           <div className={styles.groupMembers}>
             <div className={styles.member}>
               <div className={styles.avatarWrapper}>
-                <a href={"https://skymmel.eu"} target={"_blank"}>
+                <a href={"https://skymmel.eu"} target={"_blank"} rel={"noreferrer"}>
                   <Image src={avatarSkymmel} alt={"avatar"} width={avatarSize} height={avatarSize}/>
                 </a>
               </div>
@@ -91,7 +91,7 @@ export default function Home() {
             </div>
             <div className={styles.member}>
               <div className={styles.avatarWrapper}>
-                <a href={"https://jakooob.me"} target={"_blank"}>
+                <a href={"https://jakooob.me"} target={"_blank"} rel={"noreferrer"}>
                   <Image src={avatarJakooob} alt={"avatar"} width={avatarSize} height={avatarSize}/>
                 </a>
               </div>

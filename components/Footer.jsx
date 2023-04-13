@@ -26,13 +26,13 @@ export default function Footer() {
                                 <h3>Follow us</h3>
                                 <ul>
                                     <li>
-                                        <a href={"https://twitter.com/AcnodTeam"} target={"_blank"}>Twitter</a>
+                                        <a href={"https://twitter.com/AcnodTeam"} target={"_blank"} rel={"noreferrer"}>Twitter</a>
                                     </li>
                                     <li>
-                                        <a href={"https://discord.gg/78x8j5tJfx"} target={"_blank"}>Discord</a>
+                                        <a href={"https://discord.gg/78x8j5tJfx"} target={"_blank"} rel={"noreferrer"}>Discord</a>
                                     </li>
                                     <li>
-                                        <a href={"https://instagram.com/AcnodTeam"} target={"_blank"}>Instagram</a>
+                                        <a href={"https://instagram.com/AcnodTeam"} target={"_blank"} rel={"noreferrer"}>Instagram</a>
                                     </li>
                                 </ul>
                             </div>

@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import xml2js from "xml2js";
 import { useEffect, useState } from "react";
 import styles from "@/styles/Sitemap.module.scss";
-import Link from "next/link";
 
 export default function Sitemap(){
     const [sitemap, setSitemap] = useState([]);
@@ -25,7 +24,7 @@ export default function Sitemap(){
             <main className={`${styles.main} container`}>
                 <div className={styles.sitemap}>
                     {sitemap.map((url) => (
-                        <span key={url.loc}><Link href={url.loc}>{url.title}</Link></span>
+                        <span key={url.loc}><a href={url.loc}>{url.title}</a></span>
                     ))}
                 </div>
             </main>

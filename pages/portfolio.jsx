@@ -41,7 +41,7 @@ export default function Portfolio() {
                 <div className={"container"}>
                     <div className={styles.portfolio}>
                         <section className={styles.project}>
-                            <div className={styles.img}><Image onClick={fullscreenImage} src={"/portfolio/mejs.png"} width={1920} height={1080} alt={"Nagy 3D Web"}/></div>
+                            <div className={styles.img}><Image onClick={fullscreenImage} src={"/portfolio/mejs.png"} width={1920} height={1080} alt={"Nagy 3D Web"} priority/></div>
                             <div className={styles.description}>
                                 <div className={styles.descTitle}>
                                     <h1>Mejs</h1>
@@ -54,7 +54,7 @@ export default function Portfolio() {
                             </div>
                         </section>
                         <section className={styles.project}>
-                            <div className={styles.img}><Image onClick={fullscreenImage} src={"/portfolio/nagy3d.png"} width={1920} height={1080} alt={"Nagy 3D Web"}/></div>
+                            <div className={styles.img}><Image onClick={fullscreenImage} src={"/portfolio/nagy3d.png"} width={1920} height={1080} alt={"Nagy 3D Web"} priority/></div>
                             <div className={styles.description}>
                                 <div className={styles.descTitle}>
                                     <h1>Nagy 3D</h1>

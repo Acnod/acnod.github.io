@@ -12,7 +12,7 @@ import {
 } from 'react-icons/bs';
 import Acnod3DLogo from "@/components/Acnod3DLogo";
 import avatarSkymmel from "@/public/skymmel.jpg";
-import avatarJakooob from "@/public/jakooob.jpg";
+import avatarJakooob from "@/public/jakooob.jpeg";
 import Image from 'next/image'
 import Link from "next/link";
 import Languages from "@/components/Languages";
@@ -60,12 +60,12 @@ export default function Home() {
             </li>
             <li>
               <BsLayoutTextWindow/>
-              <h2>Responsive</h2>
+              <h2>Responsiveness</h2>
               <p>Our websites provide great responsiveness for mobile, tablets and desktops.</p>
             </li>
             <li>
               <BsSpeedometer/>
-              <h2>Optimized</h2>
+              <h2>Optimization</h2>
               <p>Thanks to our use of Next.js, our websites are optimized for speed and performance.</p>
             </li>
             <li>
@@ -91,7 +91,7 @@ export default function Home() {
             </div>
             <div className={styles.member}>
               <div className={styles.avatarWrapper}>
-                <a href={"https://jakooob.me"} target={"_blank"} rel={"noreferrer"}>
+                <a href={"https://jakooob.dev"} target={"_blank"} rel={"noreferrer"}>
                   <Image src={avatarJakooob} alt={"avatar"} width={avatarSize} height={avatarSize}/>
                 </a>
               </div>

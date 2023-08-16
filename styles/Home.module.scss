@@ -148,6 +148,7 @@
             margin: 4px;
             border-radius: 50%;
             box-shadow: vars.$box-shadow-default;
+            object-fit: cover;
           }
           &:hover {
             border-color: vars.$color-white;

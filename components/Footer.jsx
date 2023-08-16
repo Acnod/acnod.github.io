@@ -29,7 +29,7 @@ export default function Footer() {
                                         <a href={"https://twitter.com/AcnodTeam"} target={"_blank"} rel={"noreferrer"}>Twitter</a>
                                     </li>
                                     <li>
-                                        <a href={"https://discord.gg/78x8j5tJfx"} target={"_blank"} rel={"noreferrer"}>Discord</a>
+                                        <a href={"https://discord.gg/vWkQswvdnA"} target={"_blank"} rel={"noreferrer"}>Discord</a>
                                     </li>
                                     <li>
                                         <a href={"https://instagram.com/AcnodTeam"} target={"_blank"} rel={"noreferrer"}>Instagram</a>

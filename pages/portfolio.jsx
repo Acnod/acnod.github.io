@@ -49,7 +49,7 @@ export default function Portfolio() {
                                 <Languages className={styles.languages} languages={["NextJS", "SCSS"]}/>
                                 <p>Mejs is a Czech website dedicated to the Minecraft server of the same name. Built with NextJS, it offers a great user experience with its modern design. The website is designed with a clean and minimalist layout.</p>
                                 <span className={styles.links}>
-                                    <a href={"#"}><FaGlobe/><p>Mejs.cz</p></a>
+                                    <a href={"https://mejs.cz"}><FaGlobe/><p>Mejs.cz</p></a>
                                 </span>
                             </div>
                         </section>

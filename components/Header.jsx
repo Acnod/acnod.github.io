@@ -4,8 +4,11 @@ import smallLogo from '@/public/brand/small-logo.svg';
 import navigationImage from '@/public/navigation.svg';
 import $ from "jquery";
 import Link from "next/link";
+import {useTranslation} from "next-i18next";
 
 export default function Header() {
+    const tc = useTranslation('common').t;
+
     function openMenu(){
         let navigationBar = $("#navigationBar");
         if (navigationBar.hasClass(styles.open)) {
@@ -24,10 +27,15 @@ export default function Header() {
                 <button onClick={openMenu}><Image src={navigationImage} height={48}  alt={"Menu button"}/></button>
                 <ul id={"navigationBar"}>
                     <li>
-                        <Link href={"/"}>Home</Link>
+                        <Link href={"/"}>{tc('home')}</Link>
                     </li>
                     <li>
-                        <Link href={"/portfolio"}>Portfolio</Link>
+                        <Link href={"/portfolio"}>{tc('portfolio')}</Link>
+                    </li>
+                    <li>
+                        <Link href={""} locale={"en"}>EN</Link>
+                        <span>|</span>
+                        <Link href={""} locale={"cs"}>CZ</Link>
                     </li>
                 </ul>
             </header>

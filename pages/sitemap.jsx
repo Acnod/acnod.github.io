@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import xml2js from "xml2js";
 import { useEffect, useState } from "react";
 import styles from "@/styles/Sitemap.module.scss";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 export default function Sitemap(){
     const [sitemap, setSitemap] = useState([]);
@@ -31,4 +32,12 @@ export default function Sitemap(){
             <Footer/>
         </>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['header', 'footer', 'common'])),
+        },
+    }
 }

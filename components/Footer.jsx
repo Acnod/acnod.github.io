@@ -2,8 +2,11 @@ import Image from 'next/image'
 import styles from '@/styles/Footer.module.scss'
 import largeLogo from "@/public/brand/large-logo.svg";
 import Link from "next/link";
+import {useTranslation} from "next-i18next";
 
 export default function Footer() {
+    const { t } = useTranslation('footer');
+    const tc = useTranslation('common').t;
     return (
         <>
             <footer className={styles.footer}>
@@ -11,19 +14,19 @@ export default function Footer() {
                     <div className={styles.footerWrapper}>
                         <div className={styles.linkContent}>
                             <div>
-                                <h3>Navigation</h3>
+                                <h3>{t('navigation')}</h3>
                                 <ul>
                                     <li>
-                                        <Link href={"/"}>Home</Link>
+                                        <Link href={"/"}>{tc('home')}</Link>
                                     </li>
                                     <li>
-                                        <Link href={"/portfolio"}>Portfolio</Link>
+                                        <Link href={"/portfolio"}>{tc('portfolio')}</Link>
                                     </li>
 
                                 </ul>
                             </div>
                             <div>
-                                <h3>Follow us</h3>
+                                <h3>{t('follow_us')}</h3>
                                 <ul>
                                     <li>
                                         <a href={"https://twitter.com/AcnodTeam"} target={"_blank"} rel={"noreferrer"}>Twitter</a>
@@ -39,7 +42,7 @@ export default function Footer() {
                         </div>
                         <div className={styles.contactContent}>
                             <div className={styles.wrapper}>
-                                <h3>Contact us</h3>
+                                <h3>{t('contact_us')}</h3>
                                 <a href={"mailto:hello@acnod.net"}>hello@acnod.net</a>
                             </div>
                         </div>

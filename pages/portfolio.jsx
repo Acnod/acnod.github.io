@@ -7,10 +7,15 @@ import { FaGlobe } from "react-icons/fa";
 import { BsX } from "react-icons/bs";
 import Languages from "@/components/Languages";
 import $ from "jquery";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
 const DEFAULT_IMAGE = "/icons/image-fill.svg";
 
 export default function Portfolio() {
+    const { t } = useTranslation('portfolio');
+    const tc = useTranslation('common').t;
+
     let imgOpen = false;
     function fullscreenImage (e) {
         if (imgOpen){
@@ -35,7 +40,7 @@ export default function Portfolio() {
             <main>
                 <div className={styles.title}>
                     <div className={"container"}>
-                        <h1>Portfolio</h1>
+                        <h1>{tc('portfolio')}</h1>
                     </div>
                 </div>
                 <div className={"container"}>
@@ -47,7 +52,7 @@ export default function Portfolio() {
                                     <h1>Mejs</h1>
                                 </div>
                                 <Languages className={styles.languages} languages={["NextJS", "SCSS"]}/>
-                                <p>Mejs is a Czech website dedicated to the Minecraft server of the same name. Built with NextJS, it offers a great user experience with its modern design. The website is designed with a clean and minimalist layout.</p>
+                                <p>{t('mejs.subtitle')}</p>
                                 <span className={styles.links}>
                                     <a href={"https://mejs.cz"}><FaGlobe/><p>Mejs.cz</p></a>
                                 </span>
@@ -58,10 +63,10 @@ export default function Portfolio() {
                             <div className={styles.description}>
                                 <div className={styles.descTitle}>
                                     <h1>Nagy 3D</h1>
-                                    <h2>Not finished</h2>
+                                    <h2>{t('not_finished')}</h2>
                                 </div>
                                 <Languages className={styles.languages} languages={["NextJS", "SCSS"]}/>
-                                <p>This website is for a company named Nagy 3D that offers 3D printing and scanning in the northwestern region of the Czech Republic. It offers a minimalistic and clean look so the user can have a good experience.</p>
+                                <p>{t('nagy_3d.subtitle')}</p>
                                 <span className={styles.links}>
                                 </span>
                             </div>
@@ -72,4 +77,12 @@ export default function Portfolio() {
             <Footer />
         </>
     )
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['portfolio', 'header', 'footer', 'common'])),
+        },
+    }
 }

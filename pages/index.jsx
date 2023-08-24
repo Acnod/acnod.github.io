@@ -16,9 +16,12 @@ import avatarJakooob from "@/public/jakooob.jpeg";
 import Image from 'next/image'
 import Link from "next/link";
 import Languages from "@/components/Languages";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import {useTranslation} from "next-i18next";
 
 let avatarSize = 146;
 export default function Home() {
+  const { t } = useTranslation('home');
   Acnod3DLogo();
 
   return (
@@ -29,11 +32,11 @@ export default function Home() {
         <div className={"container"}>
             <div className={styles.grid}>
           <div>
-            <h1>Software development and essential design<span>.</span></h1>
+            <h1>{t('main_title')}<span>.</span></h1>
             <div className={styles.languages}>
               <Languages languages={['C#', 'CSS', 'HTML', 'Java', 'JavaScript', 'JQuery', 'NextJS', 'SCSS']}/>
             </div>
-              <Link href={"/portfolio"} className={styles.button}>Learn more</Link>
+              <Link href={"/portfolio"} className={styles.button}>{t('learn_more')}</Link>
           </div>
           <div id={styles.modelContainer}><div id={styles.model}/></div>
             </div>
@@ -41,44 +44,44 @@ export default function Home() {
       </main>
       <section className={styles.description}>
         <div className={"container"}>
-          <h1>What can we do<b className={"_greenText"}>?</b></h1>
+          <h1>{t('what_can_we_do')}<b className={"_greenText"}>?</b></h1>
           <ul>
             <li>
               <BsGrid1X2Fill/>
-              <h2>Detailed look</h2>
-              <p>Our web design services offer a professional, elegant, and simplistic look, while ensuring attention to detail and precision.</p>
+              <h2>{t('detailed_look')}</h2>
+              <p>{t('detailed_look.subtitle')}</p>
             </li>
             <li>
               <BsFillCalendarCheckFill/>
-              <h2>Delivery</h2>
-              <p>We are committed to delivering your product on time, and in the event of any unforeseen delays, we will promptly notify you.</p>
+              <h2>{t('delivery')}</h2>
+              <p>{t('delivery.subtitle')}</p>
             </li>
             <li>
               <BsFillChatDotsFill/>
-              <h2>Fast support</h2>
-              <p>We strive to respond to your messages within an hour, even outside of regular business hours, with the exception of overnight.</p>
+              <h2>{t('fast_support')}</h2>
+              <p>{t('fast_support.subtitle')}</p>
             </li>
             <li>
               <BsLayoutTextWindow/>
-              <h2>Responsiveness</h2>
-              <p>Our websites provide great responsiveness for mobile, tablets and desktops.</p>
+              <h2>{t('responsiveness')}</h2>
+              <p>{t('responsiveness.subtitle')}</p>
             </li>
             <li>
               <BsSpeedometer/>
-              <h2>Optimization</h2>
-              <p>Thanks to our use of Next.js, our websites are optimized for speed and performance.</p>
+              <h2>{t('optimization')}</h2>
+              <p>{t('optimization.subtitle')}</p>
             </li>
             <li>
               <BsSliders/>
-              <h2>Customization</h2>
-              <p>We offer flexible customization options to accommodate any changes you desire, ensuring that the final product meets your specifications.</p>
+              <h2>{t('customization')}</h2>
+              <p>{t('customization.subtitle')}</p>
             </li>
           </ul>
         </div>
       </section>
       <section className={styles.aboutUs} id={"aboutUs"}>
         <div className={"container"}>
-          <h1>Learn about us<span>.</span></h1>
+          <h1>{t('about_us.title')}<span>.</span></h1>
           <div className={styles.groupMembers}>
             <div className={styles.member}>
               <div className={styles.avatarWrapper}>
@@ -87,7 +90,7 @@ export default function Home() {
                 </a>
               </div>
               <h2>Wilhelm Skyba</h2>
-              <p>Designer & Developer</p>
+              <p>{t('about_us.skyba.subtitle')}</p>
             </div>
             <div className={styles.member}>
               <div className={styles.avatarWrapper}>
@@ -96,7 +99,7 @@ export default function Home() {
                 </a>
               </div>
               <h2>Jakub Sokol</h2>
-              <p>Developer</p>
+              <p>{t('about_us.sokol.subtitle')}</p>
             </div>
           </div>
         </div>
@@ -104,4 +107,12 @@ export default function Home() {
       <Footer />
     </>
   )
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['home', 'header', 'footer', 'common'])),
+    },
+  }
 }

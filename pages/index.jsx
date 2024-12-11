@@ -13,6 +13,7 @@ import {
 import Acnod3DLogo from "@/components/Acnod3DLogo";
 import avatarSkymmel from "@/public/skymmel.jpg";
 import avatarJakooob from "@/public/jakooob.jpeg";
+import avatarSlynx from "@/public/michallogo.png"
 import Image from 'next/image'
 import Link from "next/link";
 import Languages from "@/components/Languages";
@@ -34,7 +35,7 @@ export default function Home() {
           <div>
             <h1>{t('main_title')}<span>.</span></h1>
             <div className={styles.languages}>
-              <Languages languages={['C#', 'CSS', 'HTML', 'Java', 'JavaScript', 'JQuery', 'NextJS', 'SCSS']}/>
+              <Languages languages={['C#', 'CSS', 'HTML', 'Java', 'JavaScript', 'TypeScript', 'SQL', 'JQuery', 'NextJS', 'SCSS']}/>
             </div>
               <Link href={"/portfolio"} className={styles.button}>{t('learn_more')}</Link>
           </div>
@@ -91,6 +92,15 @@ export default function Home() {
               </div>
               <h2>Wilhelm Skyba</h2>
               <p>{t('about_us.skyba.subtitle')}</p>
+            </div>
+            <div className={styles.member}>
+              <div className={styles.avatarWrapper}>
+                <a href={"https://slynxdev.cz"} target={"_blank"} rel={"noreferrer"}>
+                  <Image src={avatarSlynx} alt={"avatar"} width={avatarSize} height={avatarSize}/>
+                </a>
+              </div>
+              <h2>Michal Přikryl</h2>
+              <p>{t('about_us.prikryl.subtitle')}</p>
             </div>
             <div className={styles.member}>
               <div className={styles.avatarWrapper}>

@@ -95,21 +95,12 @@ export default function Home() {
             </div>
             <div className={styles.member}>
               <div className={styles.avatarWrapper}>
-                <a href={"https://slynxdev.cz"} target={"_blank"} rel={"noreferrer"}>
+                <a href={"https://sesty.dev"} target={"_blank"} rel={"noreferrer"}>
                   <Image src={avatarSlynx} alt={"avatar"} width={avatarSize} height={avatarSize}/>
                 </a>
               </div>
-              <h2>Michal Přikryl</h2>
-              <p>{t('about_us.prikryl.subtitle')}</p>
-            </div>
-            <div className={styles.member}>
-              <div className={styles.avatarWrapper}>
-                <a href={"https://jakooob.dev"} target={"_blank"} rel={"noreferrer"}>
-                  <Image src={avatarJakooob} alt={"avatar"} width={avatarSize} height={avatarSize}/>
-                </a>
-              </div>
-              <h2>Jakub Sokol</h2>
-              <p>{t('about_us.sokol.subtitle')}</p>
+              <h2>František Šesták</h2>
+              <p>{t('about_us.sestak.subtitle')}</p>
             </div>
           </div>
         </div>

@@ -12,8 +12,7 @@ import {
 } from 'react-icons/bs';
 import Acnod3DLogo from "@/components/Acnod3DLogo";
 import avatarSkymmel from "@/public/skymmel.jpg";
-import avatarJakooob from "@/public/jakooob.jpeg";
-import avatarSlynx from "@/public/michallogo.png"
+import avatarSestak from "@/public/sestak.png"
 import Image from 'next/image'
 import Link from "next/link";
 import Languages from "@/components/Languages";
@@ -96,7 +95,7 @@ export default function Home() {
             <div className={styles.member}>
               <div className={styles.avatarWrapper}>
                 <a href={"https://sesty.dev"} target={"_blank"} rel={"noreferrer"}>
-                  <Image src={avatarSlynx} alt={"avatar"} width={avatarSize} height={avatarSize}/>
+                  <Image src={avatarSestak} alt={"avatar"} width={avatarSize} height={avatarSize}/>
                 </a>
               </div>
               <h2>František Šesták</h2>
